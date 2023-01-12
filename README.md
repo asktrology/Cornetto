@@ -14,17 +14,17 @@ Sample Request:
 curl --location --request POST 'https://asktrology.com/cornetto/user' \
 --header 'x-api-key: {APIKEY}' \
 --header 'Content-Type: application/json' \
---data-raw '{"name": "John Doe", "email": "johndoe@gmail.com", "birthdate": "1971-01-01", "birthtime": "00:00", "gender": "2"}'
+--data-raw '{"id": 1, "birthdate": "1971-01-01", "birthtime": "00:00", "country": "Turkey", "city": "Istanbul"}'
 ```
 
 Payload Description: 
 | Property | Description |
 | --- | --- |
-| name | User's name and surname |
-| email | User's e-mail information |
+| id | User Id created by requester |
 | birthdate | User's date of birth (Format: YYYY-MM-DD) |
 | birthtime | User's time of birth (Format: HH:MM) |
-| gender | 0: Non Binary, 1: Femela, 2: Male |
+| country | Country of birth of the user |
+| city | City of birth of the user |
 
 Sample Respone:
 ```JSON
