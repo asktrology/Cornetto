@@ -1,4 +1,4 @@
-# Cornetto API
+# Asktrology Horoscope Comment API (Cornetto)
 
 API Endpoint: 
 ```
