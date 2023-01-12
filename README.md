@@ -14,7 +14,7 @@ Sample Request:
 curl --location --request POST 'https://asktrology.com/cornetto/user' \
 --header 'x-api-key: {APIKEY}' \
 --header 'Content-Type: application/json' \
---data-raw '{"name": "John Doe", "email": "johndoe@gmail.com", "birthdate": "1971-01-01", "birthtime": "00:00", "gender": "1"}'
+--data-raw '{"name": "John Doe", "email": "johndoe@gmail.com", "birthdate": "1971-01-01", "birthtime": "00:00", "gender": "2"}'
 ```
 
 Payload Description: 
