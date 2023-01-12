@@ -37,7 +37,8 @@ Sample Respone:
 ## `[POST] /comment` (Get Comment & Horoscope Detail)
 
 Sample Request:
-```curl --location --request POST 'https://asktrology.com/cornetto/comment' \
+```
+curl --location --request POST 'https://asktrology.com/cornetto/comment' \
 --header 'x-api-key: {APIKEY}' \
 --header 'Content-Type: application/json' \
 --data-raw '{"comment": "6bc5054ab963e44364d2594118089a62"}'
