@@ -7,6 +7,49 @@ https://asktrology.com/cornetto
 
 Api key is valid for all requests. This parameter must be delivered with the header property "x-api-key".
 
+## `[GET] /countries` (Country List)
+
+Sample Request:
+```
+curl --location --request POST 'https://asktrology.com/cornetto/user' \
+--header 'x-api-key: {APIKEY}'
+```
+
+Sample Respone:
+```JSON
+{
+    "countries": [
+        "Germany",
+        "Turkey",
+        "..."
+    ]
+}
+```
+
+## `[GET] /cities?country={country}` (City List)
+
+Sample Request:
+```
+curl --location --request POST 'https://asktrology.com/cornetto/cities?country={country}' \
+--header 'x-api-key: {APIKEY}'
+```
+
+Request Description: 
+| Property | Description |
+| --- | --- |
+| country | String in Country List |
+
+Sample Respone:
+```JSON
+{
+    "cities": [
+        "Adana",
+        "Adiyaman",
+        "..."
+    ]
+}
+```
+
 ## `[POST] /user` (User Create)
 
 Sample Request:
@@ -29,7 +72,35 @@ Payload Description:
 Sample Respone:
 ```JSON
 {
-    "message": "User created and horoscope calculation done.",
+    "message": "User created.",
+    "comment": "6bc5054ab963e44364d2594118089a62"
+}
+```
+
+## `[GET] /user?id={id}` (Get User & Create Comment)
+
+Sample Request:
+```
+curl --location --request POST 'https://asktrology.com/cornetto/user?id={id}' \
+--header 'x-api-key: {APIKEY}'
+```
+
+Request Description: 
+| Property | Description |
+| --- | --- |
+| id | The id sent at creation by requester |
+
+Sample Respone:
+```JSON
+{
+    "user": {
+        "id": "1",
+        "birthdate": "1971-01-01",
+        "birthtime": "00:00",
+        "country": "Turkey",
+        "city": "Istanbul",
+        "created_at": "2023-01-01 00:00:00"
+    },
     "comment": "6bc5054ab963e44364d2594118089a62"
 }
 ```
